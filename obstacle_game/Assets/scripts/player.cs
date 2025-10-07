@@ -5,6 +5,12 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     [SerializeField] private float speed=20f;
+    private Rigidbody playerRb;
+    void Start()
+    {
+        playerRb = GetComponent<Rigidbody>();
+        playerRb.freezeRotation = true;
+    }
 
     void Update()
     {
